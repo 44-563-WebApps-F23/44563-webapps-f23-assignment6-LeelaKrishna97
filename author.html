@@ -7,17 +7,17 @@
 <body>
 <h2>Author entry Krishna</h2>
 <h2>Getting input</h2>
-<form id="authorGuessForm">
+<form>
     <label for="hidden">The hidden author name:</label>
     <input type="password" id="hidden" name="hidden" value="Dickens" required>
     <br>
     <label for="guess">Guess the author:</label>
     <input type="text" id="guess" name="guess" required>
     <br>
-    <input type="button" value="Check the guess" onclick="checkAuthor()">
+    <button onclick="checkAuthor ()">Check the guess</button>
 </form>
 <br>
-<div id="results">right/wrong</div>
+<div id="result">right/wrong</div>
 <br>
 <script> 
 function checkAuthor (){
@@ -25,15 +25,15 @@ function checkAuthor (){
     let oops = 0;
     secret_author = document.getElementById("hidden").value;
     guess_author = document.getElementById("guess").value;
-    result = document.getElementById("results");
+    out = document.getElementById("result");
     if (guess_author === secret_author) {
         good ++;
         alert("You got it right!");
-        result.innerHTML= `Right Guess: ${good}`;
+        out.innerHTML= `Right Guess: ${good}`;
     }else{
         oops++;
         alert("Sorry");
-        result.innerHTML= `Wrong Guess: ${oops}`;
+        out.innerHTML= `Wrong Guess: ${oops}`;
     }
 }
 </script>
