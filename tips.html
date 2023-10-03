@@ -17,10 +17,7 @@
 
     <input type="button" onclick="tips()" value="Show tip">
 </form>
-
-
-<p id="result">This text will be replaced </p>
-
+<p id="result">Tips will shown here </p>
 <script> 
 
 function tips(){
@@ -35,6 +32,39 @@ function tips(){
         }
         document.getElementById("result").innerHTML = "Tips are:" + myOutput;
 }
+</script>
+<hr>
+
+<form>
+    <label for="sum">sum</label>
+    <input type="radio" id="sum" onclick="chooseOp()" name="operation" value="sum" ><br>
+    <label for="difference">diff</label>
+    <input type="radio" id="difference" onclick="chooseOp()" name="operation" value="difference"><br>
+    <label for="product">Mult</label>
+    <input type="radio" id="product" onclick="chooseOp()" name="operation" value="product" ><br>
+    
+</form>
+<p id="results">Tips will shown here </p>
+
+<script>
+    function chooseOp() {
+        amount = parseFloat(document.getElementById("base_amount").value)
+        tip = parseFloat(document.getElementById("tip_percent").value)
+        operation = document.querySelector('input[name="operation"]:checked').value
+            var result1 = document.getElementById("results").innerHTML;
+            switch (operation){
+                case "sum":
+                    result1 = amount + tip;
+                    break;
+                case "difference":
+                    result1 = amount - tip;
+                    break;
+                case "product":
+                    result1 = amount * tip;
+                    break;
+            }
+            document.getElementById("results").innerHTML = `${operation} of ${amount} and ${tip} is ${result1}`;
+        }
 </script>
 
 </body>
