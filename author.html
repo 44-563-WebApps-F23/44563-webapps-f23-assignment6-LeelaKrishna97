@@ -37,5 +37,37 @@ function checkAuthor (){
     }
 }
 </script>
+
+<div class="image-container">
+    <img onclick="selectImage()" src="Delhi.jpg" alt="Delhi" style="width: 100px; ; height: 100px;">
+</div>
+<script>
+    let useImage=1;
+    function selectImage(){
+        var imageElement = document.querySelector('.image-container img');
+        switch(useImage) {
+            case 1:
+            imageElement.src='hyderabad.jpg';
+            useImage=2;
+            break;
+            case 2:
+            imageElement.src='london.jpg';
+            useImage=3;
+            break;
+            case 3:
+            imageElement.src='Delhi.jpg';
+            useImage=1;
+            break;
+        }
+    }
+</script>
+
+<!-- <div>
+    <img src="hyderabad.jpg" alt="Hyderabad" style="width: 100px; ; height: 100px; ;">
+</div>
+<div>
+    <img src="london.jpg" alt="London" style="width: 100px; ; height: 100px; ;">
+</div> -->
+
 </body>
 </html> 
