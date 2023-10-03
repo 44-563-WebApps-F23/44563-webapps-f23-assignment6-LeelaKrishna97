@@ -41,11 +41,9 @@ function tips(){
     <label for="difference">diff</label>
     <input type="radio" id="difference" onclick="chooseOp()" name="operation" value="difference"><br>
     <label for="product">Mult</label>
-    <input type="radio" id="product" onclick="chooseOp()" name="operation" value="product" ><br>
-    
+    <input type="radio" id="product" onclick="chooseOp()" name="operation" value="product" ><br> 
 </form>
 <p id="results">Tips will shown here </p>
-
 <script>
     function chooseOp() {
         amount = parseFloat(document.getElementById("base_amount").value)
