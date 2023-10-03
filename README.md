@@ -3,5 +3,7 @@
 Introduction to Java Script and DOM
 
 Hosted at : [author.html](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-LeelaKrishna97/author.html)
+
 Hosted at : [tips.html](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-LeelaKrishna97/tips.html)
+
 Hosted at : [cruise.html](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-LeelaKrishna97/cruise.html)
