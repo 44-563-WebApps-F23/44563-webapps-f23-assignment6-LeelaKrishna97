@@ -29,13 +29,18 @@ function checkAuthor (){
     if (guess_author === secret_author) {
         good ++;
         alert("You got it right!");
-        out.innerHTML= `Right Guess: ${good}`;
     }else{
         oops++;
+        if(oops > 7){
+            document.getElementById("y").onclick=bonusguess();
+        }
         alert("Sorry");
-        out.innerHTML= `Wrong Guess: ${oops}`;
     }
+        out.innerHTML= "Correct Guess :"+good+"Wrong Guess: "+oops;
 }
+        function bonusguess(){
+        alert("Sorry, ran out of guesses.");
+        }
 </script>
 
 <div class="image-container">
