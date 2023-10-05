@@ -17,7 +17,7 @@
 
     <input type="button" onclick="tips()" value="Show tip">
 </form>
-<p id="result">Tips will shown here </p>
+<p id="result">Tips are : </p>
 <script> 
 
 function tips(){
@@ -27,8 +27,8 @@ function tips(){
     var a =0;
     while( a<5){
             var tips = (amount * (tip + a * 4)) / 100;
-            myOutput = myOutput + (tip + a * 4) + "% is " + tips.toFixed(2) + ";    ";
-            i++;
+            myOutput = myOutput + (tips + a * 4) + "% is " + tips + ";    ";
+            a++;
         }
         document.getElementById("result").innerHTML = "Tips are:" + myOutput;
 }
